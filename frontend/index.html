@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SEB Future OS v1.2</title>
+  <link rel="stylesheet" href="/assets/css/design-system.css" />
+</head>
+<body>
+  <div id="loader" class="app-loader hidden">
+    <div class="loader-card">
+      <div class="loader-orb"></div>
+      <strong>Preparando experiência</strong>
+      <span>Carregando inteligência educacional 360...</span>
+      <div class="loader-bar"><i></i></div>
+    </div>
+  </div>
+
+  <main id="app"></main>
+
+  <template id="login-template">
+    <section class="login-shell premium-login">
+      <div class="login-visual">
+        <div class="login-bg-orb orb-one"></div>
+        <div class="login-bg-orb orb-two"></div>
+        <div class="login-bg-grid"></div>
+        <header class="login-brand-row">
+          <div class="brand-mark">S</div>
+          <div>
+            <strong>SEB Future OS</strong>
+            <span>Protótipo funcional • v1.2</span>
+          </div>
+        </header>
+        <div class="login-copy-stack">
+          <p class="eyebrow">Ecossistema proprietário de inteligência educacional</p>
+          <h1>Uma visão 360 para cada pessoa da jornada escolar.</h1>
+          <p class="hero-copy">Selecione um ambiente e entre numa demonstração com menus, dados, telas e contexto próprios. Rede, escola, coordenação, professor, família e estudante deixam de operar em silos e passam a enxergar a mesma jornada com inteligência acionável.</p>
+          <div class="hero-grid">
+            <div><b>6</b><span>ambientes separados</span></div>
+            <div><b>360</b><span>diagnósticos e alertas</span></div>
+            <div><b>IA</b><span>recomendações simuladas</span></div>
+          </div>
+        </div>
+        <div class="animated-ecosystem" aria-hidden="true">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="center-node">🧠</div>
+          <div class="float-node node-1">🏫</div>
+          <div class="float-node node-2">👨‍👩‍👧</div>
+          <div class="float-node node-3">🎒</div>
+          <div class="float-node node-4">🧑‍🏫</div>
+          <div class="float-node node-5">📊</div>
+        </div>
+      </div>
+
+      <form id="login-form" class="login-panel">
+        <span class="badge">Acesso de demonstração</span>
+        <h2>Escolha a visão da demo</h2>
+        <p>Ao selecionar o tipo de usuário, o protótipo carrega somente os menus permitidos para aquele ambiente.</p>
+        <label>Tipo de acesso
+          <select id="email" name="email">
+            <option value="rede@sebfuture.local">🌐 Rede / Diretoria</option>
+            <option value="escola@sebfuture.local">🏫 Escola / Direção</option>
+            <option value="coordenacao@sebfuture.local">📡 Coordenação Pedagógica</option>
+            <option value="professor@sebfuture.local">🧑‍🏫 Professor</option>
+            <option value="familia@sebfuture.local">👨‍👩‍👧 Família</option>
+            <option value="estudante@sebfuture.local">🎒 Estudante</option>
+          </select>
+        </label>
+        <div id="login-context" class="login-context-card"></div>
+        <label>Senha
+          <input id="password" name="password" type="password" value="123456" />
+        </label>
+        <button class="btn primary login-submit" type="submit">Entrar no ambiente selecionado →</button>
+        <div id="login-error" class="error-message"></div>
+        <small>Dados mockados para apresentação executiva. PostgreSQL e JWT já estão estruturados para evolução técnica.</small>
+      </form>
+    </section>
+  </template>
+
+  <script type="module" src="/assets/js/app.js"></script>
+</body>
+</html>
