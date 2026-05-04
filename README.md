@@ -110,3 +110,31 @@ Todos usam a senha `123456`:
 - `professor@sebfuture.local` — vê professor, alunos, diagnósticos, intervenções e IA.
 - `familia@sebfuture.local` — vê família, estudante, diagnósticos, marketplace e IA.
 - `estudante@sebfuture.local` — vê estudante, diagnósticos, marketplace e IA.
+
+
+## v1.3.1.0 — Landing premium, ecossistema clicável e gamificação
+
+Novidades desta versão:
+
+- Landing page premium com animação visual do ecossistema.
+- Mapa clicável dos ambientes: Rede, Escola, Coordenação, Professor, Família e Estudante.
+- Login contextual por persona, preservando JWT e mocks.
+- Menus filtrados por ambiente logado.
+- Menu lateral colapsável: aberto com texto e ícones, fechado apenas com ícones.
+- Alternância visual Light/Dark com persistência em localStorage.
+- Scrollbars estilizadas no documento, listas, menu, modal e chatbot.
+- Chatbot contextual simulado para cada área/persona.
+- Experiência gamificada para estudante: missões, XP, conquistas e mentor IA.
+- Criador gamificado de aulas para professor: tema, objetivo, perfil da turma, plano gerado e recompensas.
+- Fluxos principais por experiência, sem dependência de API externa de IA.
+
+Perfis de demo:
+
+- rede@sebfuture.local
+- escola@sebfuture.local
+- coordenacao@sebfuture.local
+- professor@sebfuture.local
+- familia@sebfuture.local
+- estudante@sebfuture.local
+
+Senha para todos: `123456`

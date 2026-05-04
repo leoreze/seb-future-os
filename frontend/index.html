@@ -1,80 +1,139 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SEB Future OS v1.2</title>
+  <title>SEB Future OS v1.3.1 • Ecossistema Educacional 360</title>
+  <meta name="description" content="Protótipo funcional de ecossistema educacional 360 com IA, gamificação, diagnósticos, marketplace e experiências por persona." />
   <link rel="stylesheet" href="/assets/css/design-system.css" />
 </head>
 <body>
-  <div id="loader" class="app-loader hidden">
+  <div id="loader" class="app-loader hidden" aria-live="polite">
     <div class="loader-card">
       <div class="loader-orb"></div>
-      <strong>Preparando experiência</strong>
-      <span>Carregando inteligência educacional 360...</span>
+      <strong>Preparando experiência premium</strong>
+      <span>Carregando ecossistema, IA simulada e fluxos por persona...</span>
       <div class="loader-bar"><i></i></div>
     </div>
   </div>
 
   <main id="app"></main>
 
-  <template id="login-template">
-    <section class="login-shell premium-login">
-      <div class="login-visual">
-        <div class="login-bg-orb orb-one"></div>
-        <div class="login-bg-orb orb-two"></div>
-        <div class="login-bg-grid"></div>
-        <header class="login-brand-row">
-          <div class="brand-mark">S</div>
-          <div>
-            <strong>SEB Future OS</strong>
-            <span>Protótipo funcional • v1.2</span>
-          </div>
-        </header>
-        <div class="login-copy-stack">
-          <p class="eyebrow">Ecossistema proprietário de inteligência educacional</p>
-          <h1>Uma visão 360 para cada pessoa da jornada escolar.</h1>
-          <p class="hero-copy">Selecione um ambiente e entre numa demonstração com menus, dados, telas e contexto próprios. Rede, escola, coordenação, professor, família e estudante deixam de operar em silos e passam a enxergar a mesma jornada com inteligência acionável.</p>
-          <div class="hero-grid">
-            <div><b>6</b><span>ambientes separados</span></div>
-            <div><b>360</b><span>diagnósticos e alertas</span></div>
-            <div><b>IA</b><span>recomendações simuladas</span></div>
-          </div>
+  <template id="landing-template">
+    <section class="landing-shell">
+      <nav class="landing-nav glass-panel">
+        <a class="brand-lockup" href="#top" aria-label="SEB Future OS">
+          <span class="brand-mark">S</span>
+          <span><strong>SEB Future OS</strong><small>Ecossistema educacional 360</small></span>
+        </a>
+        <div class="nav-actions">
+          <button class="theme-pill" data-theme-choice="light">☀️ Light</button>
+          <button class="theme-pill" data-theme-choice="dark">🌙 Dark</button>
+          <button class="btn ghost" data-scroll-login>Entrar na demo</button>
         </div>
-        <div class="animated-ecosystem" aria-hidden="true">
-          <div class="orbit orbit-a"></div>
-          <div class="orbit orbit-b"></div>
-          <div class="center-node">🧠</div>
-          <div class="float-node node-1">🏫</div>
-          <div class="float-node node-2">👨‍👩‍👧</div>
-          <div class="float-node node-3">🎒</div>
-          <div class="float-node node-4">🧑‍🏫</div>
-          <div class="float-node node-5">📊</div>
-        </div>
-      </div>
+      </nav>
 
-      <form id="login-form" class="login-panel">
-        <span class="badge">Acesso de demonstração</span>
-        <h2>Escolha a visão da demo</h2>
-        <p>Ao selecionar o tipo de usuário, o protótipo carrega somente os menus permitidos para aquele ambiente.</p>
-        <label>Tipo de acesso
-          <select id="email" name="email">
-            <option value="rede@sebfuture.local">🌐 Rede / Diretoria</option>
-            <option value="escola@sebfuture.local">🏫 Escola / Direção</option>
-            <option value="coordenacao@sebfuture.local">📡 Coordenação Pedagógica</option>
-            <option value="professor@sebfuture.local">🧑‍🏫 Professor</option>
-            <option value="familia@sebfuture.local">👨‍👩‍👧 Família</option>
-            <option value="estudante@sebfuture.local">🎒 Estudante</option>
-          </select>
-        </label>
-        <div id="login-context" class="login-context-card"></div>
-        <label>Senha
-          <input id="password" name="password" type="password" value="123456" />
-        </label>
-        <button class="btn primary login-submit" type="submit">Entrar no ambiente selecionado →</button>
-        <div id="login-error" class="error-message"></div>
-        <small>Dados mockados para apresentação executiva. PostgreSQL e JWT já estão estruturados para evolução técnica.</small>
-      </form>
+      <header id="top" class="landing-hero">
+        <div class="hero-copy-block">
+          <span class="badge">Protótipo funcional • alta fidelidade • v1.3.1</span>
+          <h1>O sistema operacional da educação conectada.</h1>
+          <p>Uma landing executiva, visual premium e navegável para demonstrar como rede, escola, coordenação, professores, famílias e estudantes podem operar dentro de uma mesma inteligência 360 — com IA contextual, diagnósticos, gamificação e marketplace.</p>
+          <div class="hero-actions">
+            <button class="btn primary" data-scroll-login>Começar experiência guiada →</button>
+            <button class="btn glass" data-scroll-ecosystem>Ver mapa do ecossistema</button>
+          </div>
+          <div class="trust-grid">
+            <article><b>6</b><span>ambientes por persona</span></article>
+            <article><b>360</b><span>diagnósticos acionáveis</span></article>
+            <article><b>IA</b><span>chatbots contextuais</span></article>
+            <article><b>XP</b><span>gamificação educacional</span></article>
+          </div>
+        </div>
+
+        <div class="ecosystem-illustration" aria-label="Ilustração animada do ecossistema educacional">
+          <div class="eco-radar radar-one"></div>
+          <div class="eco-radar radar-two"></div>
+          <div class="eco-core"><span>🧠</span><strong>IA 360</strong></div>
+          <button class="eco-node eco-rede" data-landing-role="rede"><i>🌐</i><b>Rede</b></button>
+          <button class="eco-node eco-escola" data-landing-role="escola"><i>🏫</i><b>Escola</b></button>
+          <button class="eco-node eco-coord" data-landing-role="coordenacao"><i>📡</i><b>Coordenação</b></button>
+          <button class="eco-node eco-prof" data-landing-role="professor"><i>📘</i><b>Professor</b></button>
+          <button class="eco-node eco-family" data-landing-role="familia"><i>👨‍👩‍👧</i><b>Família</b></button>
+          <button class="eco-node eco-student" data-landing-role="estudante"><i>🎒</i><b>Aluno</b></button>
+          <svg class="eco-lines" viewBox="0 0 620 620" aria-hidden="true">
+            <path d="M310 310 C160 120 130 120 92 120" />
+            <path d="M310 310 C465 115 500 120 528 125" />
+            <path d="M310 310 C540 300 565 315 575 330" />
+            <path d="M310 310 C470 500 510 505 540 510" />
+            <path d="M310 310 C160 500 120 500 82 505" />
+            <path d="M310 310 C90 320 65 315 50 330" />
+          </svg>
+        </div>
+      </header>
+
+      <section id="ecosystem-map" class="ecosystem-section">
+        <div class="section-head">
+          <span class="badge">Mapa clicável do ecossistema</span>
+          <h2>Cada ambiente abre um fluxo de experiência próprio.</h2>
+          <p>Clique em uma área para selecionar automaticamente o perfil da demo. O login carrega menus, chatbot, dados e componentes conforme a persona.</p>
+        </div>
+        <div id="landing-ecosystem-cards" class="ecosystem-card-grid"></div>
+      </section>
+
+      <section class="showcase-grid">
+        <article class="showcase-card">
+          <span>🎮</span><h3>Aluno com gamificação IA</h3><p>Missões, XP, badges, mentor IA, streak de estudo e trilha semanal personalizada.</p>
+        </article>
+        <article class="showcase-card">
+          <span>📘</span><h3>Professor cria aula como missão</h3><p>Um fluxo gamificado transforma tema, objetivo e perfil da turma em plano de aula acionável.</p>
+        </article>
+        <article class="showcase-card">
+          <span>🤖</span><h3>Chatbot por área</h3><p>Cada ambiente possui um assistente simulado com linguagem e recomendações específicas.</p>
+        </article>
+      </section>
+
+      <section id="login-area" class="login-shell premium-login">
+        <div class="login-visual glass-panel">
+          <div class="login-bg-orb orb-one"></div>
+          <div class="login-bg-orb orb-two"></div>
+          <div class="login-bg-grid"></div>
+          <header class="login-brand-row">
+            <div class="brand-mark">S</div>
+            <div><strong>SEB Future OS</strong><span>Demo executiva por ambiente</span></div>
+          </header>
+          <div class="login-copy-stack">
+            <p class="eyebrow">A mesma tese, seis experiências diferentes</p>
+            <h2>Escolha uma persona e entre no fluxo real da demonstração.</h2>
+            <p>O protótipo muda menu, dashboard, chatbot, cards, microcopy, gamificação e ações conforme o ambiente selecionado. Isso deixa a apresentação mais concreta para diretoria, operação escolar e usuários finais.</p>
+          </div>
+          <div class="mini-orbit" aria-hidden="true">
+            <span>📊</span><span>🧠</span><span>🎒</span><span>🏫</span><span>💬</span>
+          </div>
+        </div>
+
+        <form id="login-form" class="login-panel glass-panel">
+          <span class="badge">Acesso de demonstração</span>
+          <h2>Entrar no ambiente</h2>
+          <p>Selecione o tipo de acesso. Cada login mostra apenas os módulos autorizados para aquele contexto.</p>
+          <label>Tipo de acesso
+            <select id="email" name="email">
+              <option value="rede@sebfuture.local" data-role="rede">🌐 Rede / Diretoria</option>
+              <option value="escola@sebfuture.local" data-role="escola">🏫 Escola / Direção</option>
+              <option value="coordenacao@sebfuture.local" data-role="coordenacao">📡 Coordenação Pedagógica</option>
+              <option value="professor@sebfuture.local" data-role="professor">📘 Professor</option>
+              <option value="familia@sebfuture.local" data-role="familia">👨‍👩‍👧 Família</option>
+              <option value="estudante@sebfuture.local" data-role="estudante">🎒 Estudante</option>
+            </select>
+          </label>
+          <div id="login-context" class="login-context-card"></div>
+          <label>Senha
+            <input id="password" name="password" type="password" value="123456" autocomplete="current-password" />
+          </label>
+          <button class="btn primary login-submit" type="submit">Entrar no ambiente selecionado →</button>
+          <div id="login-error" class="error-message"></div>
+          <small>Dados mockados para apresentação. JWT, Express e estrutura PostgreSQL opcional preservados para evolução.</small>
+        </form>
+      </section>
     </section>
   </template>
 
